@@ -7449,7 +7449,7 @@ function project_save_confirmed(input) {
 }
 
 function load_from_url(input, callback){
-  $.getJSON(input.url.value, (data)=>{
+  $.getJSON(input.value, (data)=>{
     project_open_parse_json_file(data)
   })
 }
