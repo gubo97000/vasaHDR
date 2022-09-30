@@ -16,4 +16,4 @@ jobs:
           SRC_FOLDER_PATH: 'public'
           TARGET_BRANCH: 'gh-pages'
         run: |
-          git subtree push --prefix $SRC_FOLDER_PATH main $TARGET_BRANCH
+          git subtree push --prefix $SRC_FOLDER_PATH origin $TARGET_BRANCH
