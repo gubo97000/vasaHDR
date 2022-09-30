@@ -7449,13 +7449,13 @@ function project_save_confirmed(input) {
 }
 
 function load_from_url(url, callback){
-  $.getJSON(url, (data)=>{
-    project_open_parse_json_file(data)
+  $.getJSON(url.value, (data)=>{
+    callback(data)
   })
 }
 
 function project_open_project_url() {
-  var ok_callback = () => {
+  var ok_callback = (url) => {
     load_from_url(url, project_open_parse_json_file)
   }
   var config = { 'title': 'Load Project from URL' };
