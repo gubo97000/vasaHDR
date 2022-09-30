@@ -7448,8 +7448,8 @@ function project_save_confirmed(input) {
   user_input_default_cancel_handler();
 }
 
-function load_from_url(url, callback){
-  $.getJSON(url, (data)=>{
+function load_from_url(input, callback){
+  $.getJSON(input.url.value, (data)=>{
     project_open_parse_json_file(data)
   })
 }
