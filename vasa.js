@@ -7448,15 +7448,16 @@ function project_save_confirmed(input) {
   user_input_default_cancel_handler();
 }
 
-function load_from_url(url, callback){
-  $.getJSON(url.value, (data)=>{
+function load_from_url(input, callback){
+  $.get(input.url.value, (data)=>{
+    console.log(data)
     callback(data)
   })
 }
 
 function project_open_project_url() {
-  var ok_callback = (url) => {
-    load_from_url(url, project_open_parse_json_file)
+  var ok_callback = (input) => {
+    load_from_url(input, project_open_parse_json_file)
   }
   var config = { 'title': 'Load Project from URL' };
   var input = {
