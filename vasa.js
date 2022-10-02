@@ -7450,7 +7450,6 @@ function project_save_confirmed(input) {
 
 function load_from_url(input, callback){
   $.get(input.url.value, (data)=>{
-    console.log(data)
     callback(data)
   })
 }
@@ -7461,7 +7460,7 @@ function project_open_project_url() {
   }
   var config = { 'title': 'Load Project from URL' };
   var input = {
-    'url': { type: 'text', name: 'Project URL', value: "", size: 8 },
+    'url': { type: 'text', name: 'Project URL', value: "https://raw.githubusercontent.com/gubo97000/vasaHDR/data/HDRtest.json", size: 60 },
   };
   invoke_with_user_inputs(ok_callback, input, config)
 }
